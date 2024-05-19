@@ -1,6 +1,6 @@
 {
   "name": "react-coder-package",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "author": "Darshan Vaghela",
   "dependencies": {
@@ -13,6 +13,15 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarshanVaghela284/NewPackage.git"
+  },
+  "keywords": [
+    "react",
+    "package"
+  ],
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
