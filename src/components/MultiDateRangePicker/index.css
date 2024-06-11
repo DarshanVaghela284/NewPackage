@@ -1,0 +1,485 @@
+.multi-calender-range .rdrDefinedRangesWrapper {
+  width: 160px;
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.multi-calender-range .rdrInputRanges {
+  display: none;
+}
+
+.multi-calender-range
+  .rdrCalendarWrapper:not(.rdrDateRangeWrapper)
+  .rdrDayHovered
+  .rdrDayNumber:after {
+  content: "";
+  width: 26px !important;
+  height: 26px !important;
+  border: 0px solid currentColor !important;
+  border-radius: 100% !important;
+  position: absolute !important;
+  top: -3px !important;
+  right: 0px !important;
+  left: -1px !important;
+  bottom: 0px !important;
+  background: rgba(0, 145, 255, 0.1);
+}
+
+.multi-calender-range .rdrCalendarWrapper {
+  color: #000000;
+  font-size: 12px;
+  position: relative !important;
+  width: auto !important;
+  height: unset !important;
+}
+
+.multi-calender-range .rdrDateDisplayWrapper {
+  background-color: rgb(239, 242, 247);
+}
+
+.multi-calender-range .rdrDateDisplay {
+  margin: 0.833em;
+}
+
+.multi-calender-range .rdrDateDisplayItem {
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 2px 0 rgba(35, 57, 66, 0.21);
+  border: 1px solid transparent;
+}
+
+.multi-calender-range .rdrDateDisplayItem input {
+  cursor: pointer;
+  height: 2.5em;
+  line-height: 2.5em;
+  border: 0px;
+  background: transparent;
+  width: 100%;
+  color: #849095;
+}
+
+.multi-calender-range .rdrDateDisplayItemActive {
+  border-color: currentColor;
+}
+
+.multi-calender-range .rdrDateDisplayItemActive input {
+  color: #7d888d;
+}
+
+.multi-calender-range .rdrMonthAndYearWrapper {
+  align-items: center;
+  width: 100% !important;
+  padding-top: 10px;
+  margin: unset !important;
+  height: 60px;
+}
+
+.multi-calender-range .rdrMonthAndYearPickers {
+  font-weight: 400 !important;
+}
+
+.multi-calender-range .rdrMonthAndYearPickers select {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 10px 22px 10px 10px !important;
+  border-radius: 4px;
+  outline: 0;
+  color: #3e484f;
+  background: url("data:image/svg+xml;utf8,<svg width='9px' height='6px' viewBox='0 0 9 6' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='Artboard' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-636.000000, -171.000000)' fill-opacity='0.368716033'><g id='input' transform='translate(172.000000, 37.000000)' fill='%230E242F' fill-rule='nonzero'><g id='Group-9' transform='translate(323.000000, 127.000000)'><path d='M142.280245,7.23952813 C141.987305,6.92353472 141.512432,6.92361662 141.219585,7.23971106 C140.926739,7.5558055 140.926815,8.06821394 141.219755,8.38420735 L145.498801,13 L149.780245,8.38162071 C150.073185,8.0656273 150.073261,7.55321886 149.780415,7.23712442 C149.487568,6.92102998 149.012695,6.92094808 148.719755,7.23694149 L145.498801,10.7113732 L142.280245,7.23952813 Z' id='arrow'></path></g></g></g></svg>")
+    no-repeat;
+  background-position: right 8px center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.multi-calender-range .rdrMonthsHorizontal:nth-child(1) {
+  border-right: 1px solid #ececec;
+}
+
+.multi-calender-range .rdrMonths {
+  border-bottom: 1px solid rgb(208 213 221 / 1);
+}
+
+.multi-calender-range .rdrMonthAndYearPickers select:hover {
+  background-color: rgba(0, 0, 0, 0.07) !important;
+}
+
+.multi-calender-range .rdrMonthPicker,
+.multi-calender-range .rdrYearPicker {
+  margin: unset !important;
+}
+
+.multi-calender-range .rdrNextPrevButton {
+  display: block;
+  width: 32px !important;
+  height: 32px !important;
+  margin: 0 0.833em;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: #eff2f7;
+}
+
+.multi-calender-range .rdrNextPrevButton:hover {
+  background: #e1e7f0 !important;
+}
+
+.multi-calender-range .rdrNextPrevButton i {
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0;
+  text-align: center;
+  border-style: solid;
+  margin: auto;
+  transform: translate(-3px, 0px);
+}
+
+.multi-calender-range .rdrPprevButton i {
+  border-width: 4px 6px 4px 4px;
+  border-color: transparent rgb(52, 73, 94) transparent transparent;
+  transform: translate(-3px, 0px);
+  content: unset !important;
+  margin: 0 0 0 14px !important;
+}
+
+.multi-calender-range .rdrNextButton i {
+  margin: 0 0 0 8px;
+  border-width: 4px 4px 4px 6px;
+  border-color: transparent transparent transparent rgb(52, 73, 94);
+  transform: translate(3px, 0px);
+}
+
+.multi-calender-range .rdrWeekDays {
+  padding: 0 0.833em;
+  gap: 2px;
+}
+
+.multi-calender-range .rdrDays {
+  gap: 4px;
+}
+
+.multi-calender-range .rdrMonth {
+  padding: 0 10px 20px 10px;
+  width: 354px !important;
+}
+
+.multi-calender-range .rdrMonth .rdrWeekDays {
+  padding: 0;
+}
+
+.multi-calender-range
+  .rdrMonths.rdrMonthsVertical
+  .rdrMonth:first-child
+  .rdrMonthName {
+  display: none;
+}
+
+.multi-calender-range .rdrWeekDay {
+  font-weight: 400;
+  line-height: 2.667em;
+  color: rgb(132, 144, 149);
+}
+
+.multi-calender-range .rdrDay {
+  background: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  padding: 0;
+  line-height: 3em;
+  height: 3em;
+  text-align: center;
+  color: #1d2429;
+}
+
+.multi-calender-range .rdrDay:focus {
+  outline: 0;
+}
+
+.multi-calender-range .rdrDayNumber {
+  outline: 0;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  top: 5px;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.multi-calender-range .rdrDayToday .rdrDayNumber span {
+  font-weight: 500;
+}
+
+.multi-calender-range .rdrDayToday .rdrDayNumber span:after {
+  content: "." !important;
+  font-size: 25px;
+  position: absolute !important;
+  top: -17px !important;
+  left: 23px !important;
+  width: 10px !important;
+  background: unset !important;
+  color: #444ce7 !important;
+}
+
+.multi-calender-range .rdrDayToday .rdrStartEdge + .rdrDayNumber span:after,
+.multi-calender-range .rdrDayToday .rdrEndEdge + .rdrDayNumber span:after {
+  color: white !important;
+}
+
+.multi-calender-range
+  .rdrDayToday:not(.rdrDayPassive)
+  .rdrInRange
+  ~ .rdrDayNumber
+  span:after,
+.multi-calender-range
+  .rdrDayToday:not(.rdrDayPassive)
+  .rdrStartEdge
+  ~ .rdrDayNumber
+  span:after,
+.multi-calender-range
+  .rdrDayToday:not(.rdrDayPassive)
+  .rdrEndEdge
+  ~ .rdrDayNumber
+  span:after,
+.multi-calender-range
+  .rdrDayToday:not(.rdrDayPassive)
+  .rdrSelected
+  ~ .rdrDayNumber
+  span:after {
+  background: #fff;
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.multi-calender-range .rdrDayStartPreview,
+.multi-calender-range .rdrDayInPreview,
+.multi-calender-range .rdrDayEndPreview {
+  background: rgba(255, 255, 255, 0.09);
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  right: 0px;
+  bottom: 3px;
+  pointer-events: none;
+  border: 0px solid currentColor;
+  z-index: 1;
+}
+
+.multi-calender-range .rdrDayStartPreview {
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-top-left-radius: 1.333em;
+  border-bottom-left-radius: 1.333em;
+  left: 0px;
+}
+
+.multi-calender-range .rdrDayInPreview {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.multi-calender-range .rdrDayEndPreview {
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-top-right-radius: 1.333em;
+  border-bottom-right-radius: 1.333em;
+  right: 2px;
+  right: 0px;
+}
+
+.multi-calender-range .rdrDefinedRangesWrapper .rdrStaticRangeSelected {
+  color: currentColor;
+  font-weight: 600;
+}
+
+.multi-calender-range .rdrStaticRange {
+  border: 0;
+  cursor: pointer;
+  display: block;
+  outline: 0;
+  border-bottom: 1px solid #eff2f7;
+  padding: 0;
+  background: #fff;
+}
+
+.multi-calender-range .rdrStaticRange:hover .rdrStaticRangeLabel,
+.multi-calender-range .rdrStaticRange:focus .rdrStaticRangeLabel {
+  background: #eff2f7;
+}
+
+.multi-calender-range .rdrStaticRangeLabel {
+  display: block;
+  outline: 0;
+  line-height: 18px;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.multi-calender-range .rdrInputRanges {
+  padding: 10px 0;
+}
+
+.multi-calender-range .rdrInputRange {
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.multi-calender-range .rdrInputRangeInput {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  text-align: center;
+  border: solid 1px rgb(222, 231, 235);
+  margin-right: 10px;
+  color: rgb(108, 118, 122);
+}
+
+.multi-calender-range .rdrInputRangeInput:focus,
+.multi-calender-range .rdrInputRangeInput:hover {
+  border-color: rgb(180, 191, 196);
+  outline: 0;
+  color: #333;
+}
+
+.multi-calender-range .rdrDayPassive {
+  pointer-events: none;
+}
+
+.multi-calender-range .rdrDayPassive .rdrDayNumber span {
+  color: #d5dce0;
+}
+
+.multi-calender-range .rdrDayPassive .rdrInRange,
+.multi-calender-range .rdrDayPassive .rdrStartEdge,
+.multi-calender-range .rdrDayPassive .rdrEndEdge,
+.multi-calender-range .rdrDayPassive .rdrSelected,
+.multi-calender-range .rdrDayPassive .rdrDayStartPreview,
+.multi-calender-range .rdrDayPassive .rdrDayInPreview,
+.multi-calender-range .rdrDayPassive .rdrDayEndPreview {
+  display: none;
+}
+
+.multi-calender-range .rdrDayDisabled {
+  background-color: rgb(248, 248, 248);
+}
+
+.multi-calender-range .rdrDayDisabled .rdrDayNumber span {
+  color: #aeb9bf;
+}
+
+.multi-calender-range .rdrDayDisabled .rdrInRange,
+.multi-calender-range .rdrDayDisabled .rdrStartEdge,
+.multi-calender-range .rdrDayDisabled .rdrEndEdge,
+.multi-calender-range .rdrDayDisabled .rdrSelected,
+.multi-calender-range .rdrDayDisabled .rdrDayStartPreview,
+.multi-calender-range .rdrDayDisabled .rdrDayInPreview,
+.multi-calender-range .rdrDayDisabled .rdrDayEndPreview {
+  filter: grayscale(100%) opacity(60%);
+}
+
+.multi-calender-range .rdrMonthName {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #030712;
+  background-color: #f1f3f5;
+  border-radius: 6px;
+}
+
+.multi-calender-range .rdrEndEdge {
+  border-radius: 6px !important;
+  background-color: #444ce7;
+  right: 2px;
+}
+
+.multi-calender-range .rdrStartEdge {
+  border-radius: 6px !important;
+  background-color: #444ce7;
+  left: 2px;
+}
+
+.multi-calender-range .rdrDay:not(.rdrDayPassive) .rdrInRange {
+  border-radius: 6px !important;
+  background-color: #ecedff;
+  color: #444ce7 !important;
+  left: 2px;
+}
+
+.multi-calender-range
+  .rdrDay:not(.rdrDayPassive)
+  .rdrInRange
+  + .rdrDayNumber
+  span {
+  color: #444ce7 !important;
+}
+
+.multi-calender-range
+  .rdrDay:not(.rdrDayPassive)
+  .rdrInRange
+  + .rdrDayNumber:hover
+  span {
+  color: currentColor !important;
+}
+
+.multi-calender-range .rdrMonth:nth-child(2) {
+  border-left: 1px solid #eaecf0;
+}
+
+.dateWrapper {
+  left: 0;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+}
+
+.header-line {
+  width: 160px;
+}
+
+.rangeClass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 0%;
+  padding: 12px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-color: #eaecf0;
+}
+
+.apply-btn {
+  border: 1px solid rgb(61, 145, 255);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 10px;
+  background-color: rgb(61, 145, 255);
+}
+.cancel-btn {
+  background: white;
+  padding: 5px 4px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-weight: 500;
+}
